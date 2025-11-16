@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>University Website</title>
+<style>
+  * { 
+margin: 0; 
+padding: 0; 
+box-sizing: border-box; 
+font-family: Arial, Helvetica, sans-serif; 
+} 
+aside { 
+width: 100%; 
+height: 45px; 
+display: flex; 
+justify-content: flex-end; 
+align-items: center; 
+background: #f6ece0;
+padding: 0 12px; 
+} 
+.appbtn { 
+background: #634624; 
+color: #fff; 
+border: none; 
+border-radius: 20px; 
+padding: 7px 12px; 
+font-size: 13px; 
+font-weight: 700; 
+cursor: pointer; 
+} 
+aside > div { 
+display: flex; 
+gap: 16px; 
+align-items: center; 
+margin-left: 16px; 
+} 
+aside a { 
+color: #232323; 
+text-decoration: none; 
+font-weight: 700; 
+font-size: 12px; 
+} 
+.second-header { 
+width: 100%; 
+height: 68px; 
+background: #e8dfd2; 
+display: flex; 
+justify-content: space-between;
+  align-items: center; 
+padding: 0 28px; 
+} 
+.logo img { 
+height: 56px; 
+} 
+.menu { 
+display: flex; 
+gap: 22px; 
+} 
+.menu a { 
+text-decoration: none; 
+color: #2a2a2a; 
+font-weight: 800; 
+font-size: 13px; 
+letter-spacing: 0.4px; 
+} 
+.menu a:hover { 
+color: #7a572f; 
+} 
+.back { 
+position: relative; 
+background-image: url("Marwadi-University6-768x590.jpg"); background-size: cover; 
+background-position: center; 
+height: 600px; 
+width: 100%; 
+display: flex; 
+align-items: center; 
+justify-content: flex-start;
+opacity: 1; 
+} 
+.back::after { 
+content: ""; 
+position: absolute; 
+top: 0; 
+left: 0; 
+width: 100%; 
+height: 100%; 
+background: rgba(200, 227, 238, 0.72); 
+z-index: 1; 
+} 
+.hero-content { 
+position: relative; 
+z-index: 2; 
+margin-left: 60px; 
+} 
+.hero-title { 
+font-size: 48px; 
+font-weight: 700; 
+color: #2196b5; 
+line-height: 1.2; 
+max-width: 700px; 
+} 
+.hero-title .highlight { 
+background: #01354d; 
+color: #fff; 
+padding: 0 12px; 
+border-radius: 6px; 
+display: inline-block;
+  
+margin: 0 4px; 
+} 
+.steps-section { 
+background: #faf6ed; 
+padding: 40px 0 60px 0; 
+text-align: center; 
+border-radius: 14px; 
+margin: 0 auto; 
+} 
+.steps-title { 
+font-size: 38px; 
+font-weight: 700; 
+color: #3d3d3d; 
+margin-bottom: 10px; 
+} 
+.steps-desc { 
+font-size: 18px; 
+color: #4a4a4a; 
+margin-bottom: 38px; 
+} 
+.steps-row { 
+display: flex; 
+justify-content: center; 
+align-items: flex-start; 
+gap: 38px; 
+margin-bottom: 34px; 
+flex-wrap: wrap; 
+} 
+.step-box { 
+background: #fff;
+
+border-radius: 18px; 
+box-shadow: 0 2px 12px #d6bea52a; 
+padding: 28px 30px 18px 30px; 
+min-width: 170px; 
+max-width: 220px; 
+position: relative; 
+} 
+.step-circle { 
+position: absolute; 
+top: -18px; 
+left: 50%; 
+transform: translateX(-50%); 
+background: #f8f5ef; 
+color: #bc9c62; 
+padding: 5px 18px; 
+border-radius: 25px; 
+border: 2px solid #e8e2ce; 
+font-weight: 700; 
+font-size: 17px; 
+} 
+.step1 { 
+border-color: #b9e2e8; 
+} 
+.step2 { 
+border-color: #fae2c0; 
+} 
+.step3 { 
+border-color: #daf5d7; 
+}
+.step4 { 
+border-color: #b9ddf6; 
+} 
+.step5 { 
+border-color: #f7dcc2; 
+} 
+.step-icon-box { 
+margin-top: 0; 
+margin-bottom: 10px; 
+display: flex; 
+justify-content: center; 
+align-items: center; 
+} 
+.step-icon-img { 
+width: 60px; 
+height: 60px; 
+object-fit: contain; 
+} 
+.step-desc { 
+margin-top: 12px; 
+font-size: 17px; 
+font-weight: 700; 
+color: #232323; 
+} 
+.apply-main-btn { 
+background: #bc9c62; 
+color: #fff; 
+border: none; 
+border-radius: 8px; 
+padding: 14px 38px;
+
+font-size: 21px; 
+font-weight: 600; 
+cursor: pointer; 
+letter-spacing: 1px; 
+margin-top: 25px; 
+box-shadow: 0 2px 8px #d6bea52a; 
+transition: background 0.2s; 
+} 
+.apply-main-btn:hover { 
+background: #856c30; 
+} 
+.accredit-section, 
+.coe-section, 
+.career-section, 
+.placement-section, 
+.cultural-section { 
+width: 100%; 
+background: #f6f2e6; 
+padding: 100px 0 90px 0; 
+display: flex; 
+justify-content: center; 
+} 
+.accredit-row, 
+.coe-row, 
+.career-row, 
+.placement-row, 
+.cultural-row { 
+display: flex; 
+align-items: center; 
+max-width: 1400px; 
+margin: 0 auto;
+  padding: 0 60px; 
+gap: 90px; 
+} 
+.accredit-image-box, 
+.coe-image-box, 
+.career-image-box, 
+.placement-image-box, 
+.cultural-image-box { 
+flex: 0 0 420px; 
+display: flex; 
+justify-content: center; 
+align-items: center; 
+background: #fff; 
+border-radius: 32px; 
+padding: 0; 
+box-shadow: 0 8px 24px #e6d3aa36; } 
+.accredit-image, 
+.coe-image, 
+.career-image, 
+.placement-image, 
+.cultural-image { 
+width: 420px; 
+height: 320px; 
+object-fit: cover; 
+border-radius: 27px; 
+display: block; 
+} 
+.accredit-content-box, 
+.coe-content-box, 
+.career-content-box, 
+.placement-content-box,
+.cultural-content-box { 
+flex: 1 1 700px; 
+display: flex; 
+flex-direction: column; 
+align-items: flex-start; 
+justify-content: center; 
+} 
+.accredit-title, 
+.coe-title, 
+.career-title, 
+.placement-title, 
+.cultural-title { 
+font-size: 56px; 
+color: #232323; 
+font-weight: 900; 
+margin-bottom: 34px; 
+line-height: 1.12; 
+} 
+.accredit-desc, 
+.coe-desc, 
+.career-desc, 
+.placement-desc, 
+.cultural-desc { 
+font-size: 25px; 
+color: #463d2b; 
+line-height: 1.7; 
+font-weight: 400; 
+max-width: 740px; 
+} 
+.why-marwadi-section { 
+width: 100%; 
+background: #fff;
+  
+padding: 80px 0 80px 0; 
+} 
+.why-title { 
+text-align: left; 
+font-size: 48px; 
+font-weight: 900; 
+color: #232323; 
+margin-left: 90px; 
+margin-bottom: 38px; 
+} 
+.why-marwadi-row { 
+display: flex; 
+align-items: flex-start; 
+max-width: 1400px; 
+margin: 0 auto; 
+padding: 0 90px; 
+gap: 64px; 
+} 
+.why-features { 
+flex: 1 1 580px; 
+display: flex; 
+flex-direction: column; 
+gap: 37px; 
+padding-top: 8px; 
+} 
+.why-feature { 
+display: flex; 
+align-items: flex-start; 
+gap: 20px; 
+font-size: 23px; 
+color: #3e3220;
+font-weight: 600; 
+line-height: 1.48; 
+} 
+.why-icon { 
+width: 46px; 
+height: 46px; 
+object-fit: contain; 
+} 
+.why-gallery { 
+display: flex; 
+gap: 20px; 
+} 
+.gallery-main-wrap { 
+flex: 0 0 300px; 
+} 
+.why-img-main { 
+width: 300px; 
+height: 312px; 
+object-fit: cover; 
+border-radius: 22px; 
+display: block; 
+} 
+.gallery-side { 
+display: flex; 
+flex-direction: column; 
+gap: 20px; 
+} 
+.why-img-side {
+
+width: 140px; 
+height: 146px; 
+object-fit: cover; 
+border-radius: 16px; 
+display: block; 
+} 
+.admission-criteria-section { 
+width: 100%; 
+background: #f6f2e6; 
+padding: 100px 0 90px 0; 
+display: flex; 
+justify-content: center; 
+} 
+.admission-criteria-row { 
+display: flex; 
+align-items: flex-start; 
+max-width: 1400px; 
+margin: 0 auto; 
+padding: 0 60px; 
+gap: 80px; 
+} 
+.admission-photos { 
+flex: 0 0 360px; 
+display: flex; 
+flex-direction: column; 
+gap: 30px; 
+} 
+.admission-photo { 
+width: 340px; 
+height: 190px; 
+object-fit: cover; 
+border-radius: 22px;
+box-shadow: 0 8px 24px #e6d3aa36; display: block; 
+} 
+.top-photo { 
+margin-left: 30px; 
+} 
+.middle-photo { 
+margin-left: 0px; 
+} 
+.bottom-photo { 
+margin-left: 60px; 
+} 
+.admission-content { 
+flex: 1 1 620px; 
+display: flex; 
+flex-direction: column; 
+justify-content: center; 
+} 
+.admission-title { 
+font-size: 44px; 
+color: #232323; 
+font-weight: 900; 
+margin-bottom: 20px; 
+} 
+.level-title { 
+font-size: 28px; 
+color: #232323; 
+font-weight: 800;
+  
+  margin-top: 28px; 
+margin-bottom: 10px; 
+} 
+.admission-content p { 
+font-size: 21px; 
+color: #5a4e3b; 
+line-height: 1.7; 
+margin-bottom: 0; 
+font-weight: 400; 
+} 
+.advantage-section { 
+width: 100%; 
+background: #fff; 
+padding: 80px 0 60px 0; 
+text-align: center; 
+} 
+.advantage-title { 
+font-size: 44px; 
+color: #232323; 
+font-weight: 900; 
+margin-bottom: 46px; 
+letter-spacing: 0.5px; 
+} 
+.advantage-row { 
+display: flex; 
+justify-content: center; 
+align-items: flex-start; 
+gap: 70px; 
+max-width: 1300px; 
+margin: 0 auto; 
+}
+.advantage-item { 
+display: flex; 
+flex-direction: column; 
+align-items: center; 
+width: 170px; 
+min-height: 220px; 
+} 
+.advantage-icon { 
+width: 56px; 
+height: 56px; 
+margin-bottom: 10px; 
+object-fit: contain; 
+} 
+.advantage-main { 
+font-size: 36px; 
+font-weight: 800; 
+color: #232323; 
+margin-bottom: 7px; 
+margin-top: 7px; 
+letter-spacing: 1px; 
+} 
+.advantage-desc { 
+font-size: 17px; 
+font-weight: 500; 
+color: #524d43; 
+letter-spacing: 0.1px; 
+line-height: 1.3; 
+} 
+.scholarship-section { 
+background: #fff;
+padding: 80px 0 70px 0; 
+width: 100%; 
+} 
+.scholarship-title { 
+font-size: 45px; 
+color: #232323; 
+font-weight: 900; 
+text-align: center; 
+margin-bottom: 53px; 
+} 
+.scholarship-row { 
+display: flex; 
+max-width: 1350px; 
+margin: 0 auto; 
+gap: 75px; 
+align-items: flex-start; 
+justify-content: space-between; 
+} 
+.scholarship-tabs { 
+flex: 1 1 450px; 
+min-width: 330px; 
+} 
+.tabs-header { 
+display: flex; 
+gap: 44px; 
+font-weight: 500; 
+justify-content: flex-start; 
+margin-bottom: 8px; 
+font-size: 19px; 
+color: #a88f5b; 
+letter-spacing: 0.3px;
+
+} 
+.tab.active { 
+color: #a88f5b; 
+font-weight: 700; 
+border-bottom: 2px solid #a88f5b; 
+padding-bottom: 5px; 
+} 
+.tab { 
+cursor: pointer; 
+background: none; 
+} 
+.tabs-divider { 
+border-bottom: 1.4px solid #d2c7b7; 
+margin-bottom: 24px; 
+width: 100%; 
+margin-right: 7px; 
+} 
+.scholarship-list { 
+list-style: none; 
+padding: 0; 
+margin: 0; 
+font-size: 21px; 
+} 
+.scholarship-list li + li { 
+margin-top: 18px; 
+} 
+.scholarship-list a { 
+color: #a88f5b;
+  font-weight: 700; 
+text-decoration: none; 
+transition: color .18s; 
+} 
+.scholarship-list a:hover { 
+color: #7d6539; 
+text-decoration: underline; 
+} 
+.arrow { 
+font-size: 18px; 
+margin-left: 4px; 
+vertical-align: middle; 
+} 
+.scholarship-gallery { 
+display: flex; 
+flex-direction: column; 
+gap: 24px; 
+align-items: flex-end; 
+} 
+.scholar-img-top { 
+width: 340px; 
+height: 170px; 
+object-fit: cover; 
+border-radius: 16px; 
+box-shadow: 0 8px 24px #e6d3aa36; } 
+.scholar-img-bottom { 
+width: 270px; 
+height: 170px; 
+object-fit: cover;
+border-radius: 16px; 
+box-shadow: 0 8px 24px #e6d3aa36; 
+} 
+.stories-section { 
+background: #fff; 
+padding: 75px 0 85px 0; 
+width: 100%; 
+} 
+.stories-title { 
+font-size: 44px; 
+color: #232323; 
+font-weight: 900; 
+text-align: center; 
+margin-bottom: 35px; 
+} 
+.stories-tabs { 
+display: flex; 
+justify-content: center; 
+align-items: center; 
+gap: 34px; 
+margin-bottom: 6px; 
+} 
+.stories-tab { 
+font-size: 21px; 
+color: #a08554; 
+font-weight: 700; 
+letter-spacing: 0.3px; 
+cursor: pointer; 
+padding-bottom: 9px; 
+}
+.stories-tab.active { 
+color: #8c672b; 
+border-bottom: 3px solid #8c672b; 
+} 
+.stories-divider { 
+height: 1px; 
+width: 78%; 
+margin: 0 auto 36px auto; 
+background: #ded6c7; 
+} 
+.stories-gallery { 
+display: flex; 
+justify-content: center; 
+gap: 38px; 
+margin-top: 0; 
+} 
+.stories-card { 
+background: #faf9f7; 
+border-radius: 22px; 
+box-shadow: 0 4px 20px #ece5db32; padding: 0; 
+width: 320px; 
+height: 340px; 
+display: flex; 
+align-items: flex-end; 
+overflow: hidden; 
+} 
+.stories-img { 
+width: 100%; 
+height: 100%; 
+object-fit: cover;
+
+border-radius: 22px; 
+display: block; 
+} 
+.footer { 
+background: #f6f2e6; 
+padding: 60px 0 0 0; 
+font-size: 17px; 
+color: #3d3b34; 
+} 
+.footer-main { 
+max-width: 1400px; 
+margin: 0 auto; 
+display: flex; 
+align-items: flex-start; 
+justify-content: space-between; 
+gap: 36px; 
+flex-wrap: wrap; 
+} 
+.footer-col { 
+min-width: 180px; 
+margin-bottom: 30px; 
+} 
+.footer-col h4 { 
+font-size: 20px; 
+color: #46341f; 
+font-weight: 800; 
+margin-bottom: 12px; 
+margin-top: 34px; 
+} 
+.footer-col ul,
+  
+.footer-contact-info { 
+list-style: none; 
+margin: 0 0 18px 0; 
+padding: 0; 
+} 
+.footer-col ul li, 
+.footer-contact-info div { 
+margin-bottom: 7px; 
+} 
+.footer-col ul li a, 
+.footer-contact-info a { 
+color: #232323; 
+text-decoration: none; 
+font-weight: 500; 
+transition: color .14s; 
+} 
+.footer-col ul li a:hover, 
+.footer-contact-info a:hover { 
+color: #a08554; 
+} 
+.footer-contact h4 { 
+margin-top: 22px; 
+} 
+.footer-socials { 
+display: flex; 
+gap: 12px; 
+margin-bottom: 18px; 
+} 
+.footer-socials img {
+width: 27px; 
+height: 27px; 
+} 
+.footer-apps { 
+display: flex; 
+gap: 10px; 
+margin-top: 10px; 
+} 
+.footer-apps img { 
+height: 36px; 
+width: auto; 
+} 
+.footer-bottom { 
+width: 100%; 
+background: #e0dbd2; 
+color: #706860; 
+font-size: 15px; 
+padding: 17px 32px; 
+margin-top: 20px; 
+display: flex; 
+align-items: center; 
+justify-content: space-between; 
+} 
+.footer-bottom a { 
+color: #7c6c55; 
+text-decoration: none; 
+margin-left: 8px; 
+font-size: 15px; 
+}
+.footer-bottom a:hover { 
+text-decoration: underline; 
+} 
+
+
+</style>
+</head>
+<body>
+<aside>
+<button class="appbtn">APPLY NOW</button>
+<div>
+<a href="#">LOGIN</a>
+<a href="#">OUTCOME BASED EDUCATION</a>
+<a href="#">PARENT</a>
+<a href="#">ALUMNI</a>
+</div>
+</aside>
+<header class="second-header">
+<div class="logo"><img src="logo.svg" alt="Logo" /></div>
+<nav class="menu">
+<a href="#">ACADEMICS</a>
+<a href="#">ADMISSION & AID</a>
+<a href="#">LIFE AT UNIVERSITY</a>
+<a href="#">PLACEMENTS</a>
+<a href="#">ABOUT US</a>
+<a href="#">INTERNATIONAL</a>
+<a href="#">CONTACT</a>
+</nav> 
+</header> 
+<div class="back"> 
+<div class="hero-content"> 
+<div class="hero-title"> 
+Take The <span class="highlight">First Step</span><br /> 
+Toward Your <span class="highlight">Dreams</span> 
+</div> 
+</div> 
+</div> 
+<section class="steps-section"> 
+<h2 class="steps-title">Applying Made Easy</h2> 
+<p class="steps-desc"> 
+Follow our simple step-by-step guide to complete your application with ease </p> 
+<div class="steps-row"> 
+<div class="step-box"> 
+<div class="step-circle step1"><span>step 1</span></div> 
+<div class="step-icon-box"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/login.svg" alt="Register or Login" class="step-icon-img" /> </div> 
+<div class="step-desc">Register or Login</div> 
+</div> 
+<div class="step-box"> 
+<div class="step-circle step2"><span>step 2</span></div> 
+<div class="step-icon-box"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/step2.svg" alt="Complete your Application" class="step-icon-img" /> </div> 
+<div class="step-desc">Complete your Application</div> 
+</div> 
+<div class="step-box"> 
+<div class="step-circle step3"><span>step 3</span></div>
+<div class="step-icon-box"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/step3.svg" alt="Upload supporting documents" class="step-icon img" /> 
+</div> 
+<div class="step-desc">Upload supporting documents</div> 
+</div> 
+<div class="step-box"> 
+<div class="step-circle step4"><span>step 4</span></div> 
+<div class="step-icon-box"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/step4.svg" alt="Path to Discovery" class="step-icon-img" /> </div> 
+<div class="step-desc">You are on the path to DISCOVERY</div> 
+</div> 
+<div class="step-box"> 
+<div class="step-circle step5"><span>step 5</span></div> 
+<div class="step-icon-box"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/credit-card.svg" alt="Fees Payment" class="step-icon-img" /> </div> 
+<div class="step-desc">Fees Payment</div> 
+</div> 
+</div> 
+<button class="apply-main-btn">APPLY NOW &rarr;</button> 
+</section> 
+<section class="accredit-section"> 
+<div class="accredit-row"> 
+<div class="accredit-image-box"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/naac.jpg" alt="NAAC A+ Accredited Badge" class="accredit-image"  /> 
+</div> 
+<div class="accredit-content-box">
+  <h2 class="accredit-title">NAAC A+ Accredited Institute</h2> 
+<p class="accredit-desc"> 
+NAAC – National Assessment & Accreditation Council is the country’s highest  accreditation council set up by the Government of India. It is an autonomous organization  under the Ministry of Human Resource Development and UGC (University Grants  Commission). Only 4% of the total accredited educational institutes in India have been  accredited with NAAC A+ grade. With NAAC A+, the institute is preferred in gaining funding  for startups, favoured by international companies for placements, and it is easier to get  admitted to a Foreign University for further studies. 
+</p> 
+</div> 
+</div> 
+</section> 
+<section class="coe-section"> 
+<div class="coe-row"> 
+<div class="coe-image-box"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/coe.jpg" alt="Centre of Excellence Badge" class="coe-image" /> </div> 
+<div class="coe-content-box"> 
+<h2 class="coe-title">Centre of Excellence</h2> 
+<p class="coe-desc"> 
+Marwadi University is granted the Centre of Excellence status by the Government of  Gujarat. As defined by the State Government, the Centre of Excellence means that the  College, University, or Private University are imparted with Quality Education, Path breaking Research, Quality Extension Services, Innovative Teaching Methodologies, High  Employability and Entrepreneurship. 
+</p> 
+</div> 
+</div> 
+</section> 
+<section class="career-section"> 
+<div class="career-row"> 
+<div class="career-image-box">
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/3-img.jpg" alt="Career Development Programmes" class="career image" /> 
+</div> 
+<div class="career-content-box"> 
+<h2 class="career-title"> 
+Career Development <br /> 
+Programmes 
+</h2> 
+<p class="career-desc"> 
+The Career Development Department of the Marwadi University enables MUites to  think ahead and shape their professional career. These frequent seminars/webinars cover a  wide range of topics including Soft Skills Development, Personality Development,  Placement-specific Training, and more. Various courses are undertaken in Verbal Ability,  Quantitative Aptitude, Logical Reasoning, Group Discussion, Personal Interview, and so on. </p> 
+</div> 
+</div> 
+</section> 
+<section class="placement-section"> 
+<div class="placement-row"> 
+<div class="placement-image-box"> 
+<img src="https://www.marwadiuniversity.ac.in/wp 
+content/uploads/2025/06/Future-with-Scholarships.jpg" alt="Graduation Ceremony  Placement" class="placement-image" /> 
+</div> 
+<div class="placement-content-box"> 
+<h2 class="placement-title">Placement Opportunities in MNCs</h2> 
+<p class="placement-desc"> 
+MU has a large, dedicated full-time Placement & Corporate Relations department that  ensures deserving students get placed in top companies in reputable positions. We hosted  over 480 companies (Year 2020-21) for their campus recruitment drive and created 10000+  job opportunities for our graduates. MU not only facilitates the student's placements in top  corporate companies but also takes a Three Layers of Learning approach via strategic 
+development programmes and comprehensive training programmes throughout the year to  retrain the students in the various areas. 
+</p> 
+</div> 
+</div> 
+</section> 
+<section class="cultural-section"> 
+<div class="cultural-row"> 
+<div class="cultural-image-box"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/5-img.jpg" alt="Cultural Diversity" class="cultural-image" /> </div> 
+<div class="cultural-content-box"> 
+<h2 class="cultural-title">Cultural Diversity</h2> 
+<p class="cultural-desc"> 
+Marwadi University is home to 1700+ International students from 51 countries. This  brings out the cultural diversity on the campus. With the amalgamation of 10700+  International students and Indian students from various regions, the campus becomes an  epitome of Unity in Diversity. The campus is always vibrant, lively, and thrilling all day. </p> 
+</div> 
+</div> 
+</section> 
+<section class="why-marwadi-section"> 
+<h2 class="why-title">Why is Marwadi University the place to be?</h2> <div class="why-marwadi-row"> 
+<div class="why-features"> 
+<div class="why-feature"> 
+<img src=" https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/economie.svg" alt="" class="why-icon"> 
+<span>NAAC A+</span> 
+</div> 
+<div class="why-feature">
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/quality.svg" alt="" class="why-icon"> 
+<span>Among the only 4% accredited educational institutes in India with NAAC A+  grade</span> 
+</div> 
+<div class="why-feature"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/dignity.svg" alt="" class="why-icon"> 
+<span>Located in one of the most progressive states of India – Gujarat</span> </div> 
+<div class="why-feature"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/alternetive.svg" alt="" class="why-icon"> 
+<span>High-Performance Computing Facility (Super-Computer, Awarded by GUJCOST,  Govt. of Gujarat)</span> 
+</div> 
+</div> 
+<div class="why-gallery"> 
+<div class="gallery-main-wrap"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/lb-01.jpg" alt="Library" class="why-img-main"> </div> 
+<div class="gallery-side"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/lb-02.jpg" alt="Student Reading" class="why-img-side"> <img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/lb-03.jpg" alt="Student Laptop" class="why-img-side"> </div> 
+</div> 
+</div> 
+</section> 
+<section class="admission-criteria-section"> 
+<div class="admission-criteria-row"> 
+<div class="admission-photos">
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/Frame1.jpg" alt="Lab Session" class="admission-photo top-photo"> <img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/Frame2.png" alt="Lecture" class="admission-photo middle-photo"> <img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/Frame3.png" alt="Students in Class" class="admission-photo  bottom-photo"> 
+</div> 
+<div class="admission-content"> 
+<h2 class="admission-title">Admission Criteria</h2> 
+<h3 class="level-title">Under Graduate</h3> 
+<p> 
+We assess your academic performance, along with co-curricular and leadership  involvement. Eligibility requires 10+2 completion or a Bachelor’s degree from a recognised  board. 
+</p> 
+<h3 class="level-title">Post Graduate</h3> 
+<p> 
+Admission is primarily merit-based, though some PG courses require national entrance  exam scores (CMAT, GATE) followed by counselling. Eligibility requires a Bachelor’s degree  in a relevant field. 
+</p> 
+<h3 class="level-title">PHD</h3> 
+<p> 
+The basic eligibility for Ph.D. admission is a Postgraduate degree. Selection is based on  merit from an entrance exam, followed by an interview. 
+</p> 
+</div> 
+</div> 
+</section> 
+<section class="advantage-section"> 
+<h2 class="advantage-title">The Marwadi University Advantage</h2> <div class="advantage-row"> 
+<div class="advantage-item"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/cardicon1.svg" alt="NAAC Accredited" class="advantage-icon" />
+<div class="advantage-desc">NAAC<br>Accredited</div> 
+</div> 
+<div class="advantage-item"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/cardicon2.svg" alt="NBA Accreditation" class="advantage-icon" /> <div class="advantage-main">Tier-1</div> 
+<div class="advantage-desc">NBA<br>Accreditation</div> 
+</div> 
+<div class="advantage-item"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/cardicon3.svg" alt="International Students" class="advantage-icon"  /> 
+<div class="advantage-main">1700+</div> 
+<div class="advantage-desc">International<br>Students</div> 
+</div> 
+<div class="advantage-item"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/cardicon4.svg" alt="Research Labs" class="advantage-icon" /> <div class="advantage-main">30+</div> 
+<div class="advantage-desc">Research<br>Labs</div> 
+</div> 
+<div class="advantage-item"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/cardicon1.svg" alt="Scholarship Given" class="advantage-icon" /> <div class="advantage-main">10k+</div> 
+<div class="advantage-desc">Scholarship<br>Given</div> 
+</div> 
+</div> 
+</section> 
+<section class="scholarship-section"> 
+<h2 class="scholarship-title">Scholarship and Financial aid</h2> 
+<div class="scholarship-row"> 
+<div class="scholarship-tabs"> 
+<div class="tabs-header">
+  <span class="tab active">NATIONAL STUDENT</span> 
+<span class="tab">INTERNATIONAL STUDENT</span> 
+</div> 
+<div class="tabs-divider"></div> 
+<ul class="scholarship-list"> 
+<li><a href="#">Bank Loan <span class="arrow">&#8599;</span></a></li> <li><a href="#">Digital Gujarat <span class="arrow">&#8599;</span></a></li> <li><a href="#">Mukhyamantri Yuva Swavalamban Yojana <span  
+class="arrow">&#8599;</span></a></li> 
+<li><a href="#">Chief Minister Scholarship <span  
+class="arrow">&#8599;</span></a></li> 
+<li><a href="#">National Scholarship Portal (NSP) <span  
+class="arrow">&#8599;</span></a></li> 
+<li><a href="#">SHODH Scholarship <span class="arrow">&#8599;</span></a></li> <li><a href="#">Sports Quota Scholarship <span  
+class="arrow">&#8599;</span></a></li> 
+<li><a href="#">GATE/GPAT Scholarship <span  
+class="arrow">&#8599;</span></a></li> 
+</ul> 
+</div> 
+<div class="scholarship-gallery"> 
+<img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/sc-01.jpg" class="scholar-img-top" alt="Student Award"> <img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi university/assets/img/sc-02.jpg" class="scholar-img-bottom" alt="Convocation"> </div> 
+</div> 
+</section> 
+<section class="stories-section"> 
+<h2 class="stories-title">Stories of Excellence</h2> 
+<div class="stories-tabs"> 
+<span class="stories-tab active">STUDENTS</span> 
+<span class="stories-tab">ALUMNI</span> 
+<span class="stories-tab">RECRUITERS</span> 
+<span class="stories-tab">PARENTS</span>
+</div> 
+<div class="stories-divider"></div> 
+<div class="stories-gallery"> 
+<div class="stories-card"> 
+<img src="https://www.marwadiuniversity.ac.in/wp 
+content/uploads/2025/07/Student_CE_Savan-Chauhan.jpeg" alt="Student Story"  class="stories-img"> 
+</div> 
+<div class="stories-card"> 
+<img src="https://www.marwadiuniversity.ac.in/wp 
+content/uploads/2025/07/Student_CE_Tanisha-Kakkad.jpeg" alt="Student Story"  class="stories-img"> 
+</div> 
+<div class="stories-card"> 
+<img src="https://www.marwadiuniversity.ac.in/wp 
+content/uploads/2025/07/Student_CE_Kashish-Mangtani.jpeg" alt="Student Story"  class="stories-img"> 
+</div> 
+</div> 
+</section> 
+<footer class="footer"> 
+<div class="footer-main"> 
+<div class="footer-col"> 
+<h4>Quick Links</h4> 
+<ul> 
+<li><a href="#">FAQs</a></li> 
+<li><a href="#">Careers</a></li> 
+<li><a href="#">UGC Proform</a></li> 
+<li><a href="#">Disclosure</a></li> 
+<li><a href="#">NIRF</a></li> 
+<li><a href="#">Academic Calendar</a></li> 
+<li><a href="#">Code of Conduct</a></li> 
+<li><a href="#">Naac</a></li> 
+<li><a href="#">Tender</a></li> 
+<li><a href="#">Right to Information</a></li>
+23 
+
+
+<li><a href="#">Annual Report</a></li> <li><a href="#">Image Gallery</a></li> </ul> 
+</div> 
+<div class="footer-col"> 
+<h4>Centres</h4> 
+<ul> 
+<li><a href="#">MUIIR</a></li> 
+<li><a href="#">CEFB</a></li> 
+</ul> 
+<h4>Cells</h4> 
+<ul> 
+<li><a href="#">Women Cell</a></li> <li><a href="#">Placement Cells</a></li> 
+
+<li><a href="#">Annual Report</a></li> <li><a href="#">Image Gallery</a></li> </ul> 
+</div> 
+<div class="footer-col"> 
+<h4>Centres</h4> 
+<ul> 
+<li><a href="#">MUIIR</a></li> 
+<li><a href="#">CEFB</a></li> 
+</ul> 
+<li><a href="#">Anti Ragging Cells</a></li> 
+<li><a href="#">Equal Opportunity Cell</a></li> 
+<li><a href="#">Socio-Economically Disadvantaged Group Cell (SEDG)</a></li> </ul> 
+</div> 
+<div class="footer-col"> 
+<h4>Downloads</h4> 
+<ul> 
+<li><a href="#">Brochure</a></li> 
+<li><a href="#">MU Statutes & Ordinances</a></li> 
+<li><a href="#">University Strategic Plan</a></li> 
+<li><a href="#">Inclusion as per section 2(f) of the UGC Act 1956</a></li> <li><a href="#">Act No 9 of 2016</a></li> 
+<li><a href="#">Whistleblower Policy</a></li> 
+<li><a href="#">UGC Proform</a></li> 
+<li><a href="#">SIRO Recognition</a></li> 
+</ul> 
+</div> 
+<div class="footer-col"> 
+<h4>Students Corner</h4> 
+<ul>
+<li><a href="#">Login</a></li> 
+<li><a href="#">LMS</a></li> 
+<li><a href="#">Library</a></li> 
+<li><a href="#">Alumni</a></li> 
+<li><a href="#">Calling</a></li> 
+<li><a href="#">Internal Complaints Committee</a></li> 
+<li><a href="#">National Academy Dipository</a></li> 
+<li><a href="#">DigiLocker NAD</a></li> 
+<li><a href="#">NAD-ABC</a></li> 
+</ul> 
+</div> 
+<div class="footer-col footer-contact"> 
+<h4>Follow Us</h4> 
+<div class="footer-socials"> 
+<a href="#"><img src="https://www.marwadiuniversity.ac.in/wp 
+content/themes/marwadi-university/assets/img/linkedin.png" alt="Facebook"></a> <a href="#"><img src="https://www.marwadiuniversity.ac.in/wp 
+content/themes/marwadi-university/assets/img/youtube.png" alt="Instagram"></a> <a href="#"><img src="https://www.marwadiuniversity.ac.in/wp 
+content/themes/marwadi-university/assets/img/facebook.png" alt="Linkedin"></a> <a href="#"><img src="https://www.marwadiuniversity.ac.in/wp 
+content/themes/marwadi-university/assets/img/instagram.png" alt="YouTube"></a> </div> 
+<h4>Reach Us</h4> 
+<div class="footer-contact-info"> 
+<div>Rajkot-Morbi Road, Rajkot 360003 Gujarat, India</div> 
+<div><a href="tel:+91281723456">+91281723456</a></div> 
+<div><a  
+href="mailto:info@marwadiuniversity.ac.in">info@marwadiuniversity.ac.in</a></div> <div><a href="tel:+918980030090">+918980030090</a></div> 
+</div> 
+<h4>Download App</h4> 
+<div class="footer-apps">
+  <a href="#"><img src="https://www.marwadiuniversity.ac.in/wp 
+content/themes/marwadi-university/assets/img/google-play-store-8-1-73-apk.png"  alt="Google Play"></a> 
+<a href="#"><img src="https://www.marwadiuniversity.ac.in/wp 
+content/themes/marwadi-university/assets/img/png-clipart-app-store-mobile-app-itunes ios-apple-text-label.png" alt="App Store"></a> 
+</div> 
+</div> 
+</div> 
+<div class="footer-bottom"> 
+<span>© Copyright Marwadi University. All Rights Reserved. 2025</span> <span> 
+<a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> </span> 
+</div> 
+</footer> 
+</body> 
+</html> 
+
+
